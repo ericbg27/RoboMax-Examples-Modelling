@@ -1,0 +1,160 @@
+{
+    "actions": [
+        {
+            "name": "deliver-to-fetch",
+            "capabilities": ""
+        },
+        {
+            "name": "deliver-to-table",
+            "capabilities": "manipulation"
+        },
+        {
+            "name": "open-door",
+            "capabilities": "door-opening"
+        },
+        {
+            "name": "pickup-dishes",
+            "capabilities": ""
+        }
+    ],
+    "tasks": {
+        "t0": {
+            "id": "AT1_1|1",
+            "name": "DeliverToTable",
+            "locations": "RoomA",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomA.delivery_requested",
+                    "vars": "RoomA",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "deliver-to-table"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t1": {
+            "id": "AT2_1|1",
+            "name": "DeliverToFetch",
+            "locations": "RoomA",
+            "robots_num": {
+                "fixed": "False",
+                "min": "1",
+                "max": "2"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomA.delivery_requested",
+                    "vars": "RoomA",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "deliver-to-fetch"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t2": {
+            "id": "AT1_2|1",
+            "name": "DeliverToTable",
+            "locations": "RoomA",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomA.delivery_requested",
+                    "vars": "RoomA",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "deliver-to-table"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t3": {
+            "id": "AT3_1|1",
+            "name": "PickupDishes",
+            "locations": "RoomB",
+            "robots_num": {
+                "fixed": "False",
+                "min": "1",
+                "max": "2"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomB.pickup_needed",
+                    "vars": "RoomB",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "open-door",
+                "pickup-dishes"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t4": {
+            "id": "AT3_1|2",
+            "name": "PickupDishes",
+            "locations": "RoomB",
+            "robots_num": {
+                "fixed": "False",
+                "min": "1",
+                "max": "2"
+            },
+            "preconditions": [
+                {
+                    "predicate": "Patient2.can_open",
+                    "vars": "Patient2",
+                    "var_types": "patient"
+                }
+            ],
+            "effects": [
+                {
+                    "predicate": "not RoomB.pickup_needed",
+                    "vars": "RoomB",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "pickup-dishes"
+            ],
+            "group": "True",
+            "divisible": "True"
+        }
+    },
+    "constraints": "",
+    "mission_decompositions": [
+        [
+            "t0",
+            "t2",
+            "t3"
+        ],
+        [
+            "t1",
+            "t2",
+            "t3"
+        ]
+    ]
+}

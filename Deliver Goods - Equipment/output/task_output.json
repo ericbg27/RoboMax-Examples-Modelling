@@ -1,0 +1,218 @@
+{
+    "actions": [
+        {
+            "name": "deliver-objects",
+            "capabilities": ""
+        },
+        {
+            "name": "get-object",
+            "capabilities": ""
+        },
+        {
+            "name": "recharge-battery",
+            "capabilities": ""
+        },
+        {
+            "name": "return-objects",
+            "capabilities": ""
+        },
+        {
+            "name": "trigger-alert",
+            "capabilities": ""
+        }
+    ],
+    "tasks": {
+        "t0": {
+            "id": "AT1_1_1|1",
+            "name": "GetObject",
+            "locations": "Storage1",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": "",
+            "decomposition": [
+                "get-object"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t1": {
+            "id": "AT2_1_1|1",
+            "name": "RechargeBattery",
+            "locations": "",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": [
+                "BatteryLow"
+            ],
+            "decomposition": [
+                "recharge-battery"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t2": {
+            "id": "AT1_1_2|1",
+            "name": "GetObject",
+            "locations": "Storage2",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": "",
+            "decomposition": [
+                "get-object"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t3": {
+            "id": "AT2_1_2|1",
+            "name": "RechargeBattery",
+            "locations": "",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": [
+                "BatteryLow"
+            ],
+            "decomposition": [
+                "recharge-battery"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t4": {
+            "id": "AT3_1|1",
+            "name": "DeliverObjects",
+            "locations": "Loc1",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": "",
+            "decomposition": [
+                "deliver-objects"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t5": {
+            "id": "AT4_1|1",
+            "name": "ReturnObjectsToCheckpoint",
+            "locations": "",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": "",
+            "decomposition": [
+                "return-objects"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t6": {
+            "id": "AT5_1|1",
+            "name": "AlertTrigger",
+            "locations": "",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": "",
+            "triggering_events": "",
+            "decomposition": [
+                "trigger-alert"
+            ],
+            "group": "True",
+            "divisible": "True"
+        }
+    },
+    "constraints": [
+        {
+            "type": "SEQ",
+            "task_instances": {
+                "t0": "t0",
+                "t1": "t4"
+            }
+        },
+        {
+            "type": "SEQ",
+            "task_instances": {
+                "t0": "t2",
+                "t1": "t4"
+            }
+        },
+        {
+            "type": "SEQ",
+            "task_instances": {
+                "t0": "t3",
+                "t1": "t4"
+            }
+        },
+        {
+            "type": "SEQ",
+            "task_instances": {
+                "t0": "t1",
+                "t1": "t4"
+            }
+        },
+        {
+            "type": "EC",
+            "task_instances": {
+                "t0": "t0",
+                "t1": "t1"
+            }
+        },
+        {
+            "type": "EC",
+            "task_instances": {
+                "t0": "t2",
+                "t1": "t3"
+            }
+        },
+        {
+            "type": "EC",
+            "task_instances": {
+                "t0": "t4",
+                "t1": "t5"
+            }
+        },
+        {
+            "type": "EC",
+            "task_instances": {
+                "t0": "t5",
+                "t1": "t6"
+            }
+        }
+    ],
+    "mission_decompositions": [
+        [
+            "t0",
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "t5",
+            "t6"
+        ]
+    ]
+}

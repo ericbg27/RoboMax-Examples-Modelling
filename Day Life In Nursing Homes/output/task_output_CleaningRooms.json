@@ -1,0 +1,63 @@
+{
+    "actions": [
+        {
+            "name": "clean-room-uv",
+            "capabilities": "cleaning"
+        }
+    ],
+    "tasks": {
+        "t0": {
+            "id": "AT1_1|1",
+            "name": "CleanRoomUV",
+            "locations": "RoomA",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomA.needs_cleaning",
+                    "vars": "RoomA",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "clean-room-uv"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t1": {
+            "id": "AT1_2|1",
+            "name": "CleanRoomUV",
+            "locations": "RoomB",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not RoomB.needs_cleaning",
+                    "vars": "RoomB",
+                    "var_types": "room"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "clean-room-uv"
+            ],
+            "group": "True",
+            "divisible": "True"
+        }
+    },
+    "constraints": "",
+    "mission_decompositions": [
+        [
+            "t0",
+            "t1"
+        ]
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "actions": [
+        {
+            "name": "check-patient",
+            "capabilities": "patient-checking"
+        }
+    ],
+    "tasks": {
+        "t0": {
+            "id": "AT1_1|1",
+            "name": "CheckPatient",
+            "locations": "RoomB",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not Patient1.needs_checking",
+                    "vars": "Patient1",
+                    "var_types": "patient"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "check-patient"
+            ],
+            "group": "True",
+            "divisible": "True"
+        },
+        "t1": {
+            "id": "AT1_2|1",
+            "name": "CheckPatient",
+            "locations": "RoomA",
+            "robots_num": {
+                "fixed": "True",
+                "num": "1"
+            },
+            "preconditions": "",
+            "effects": [
+                {
+                    "predicate": "not Patient2.needs_checking",
+                    "vars": "Patient2",
+                    "var_types": "patient"
+                }
+            ],
+            "triggering_events": "",
+            "decomposition": [
+                "check-patient"
+            ],
+            "group": "True",
+            "divisible": "True"
+        }
+    },
+    "constraints": "",
+    "mission_decompositions": [
+        [
+            "t0",
+            "t1"
+        ]
+    ]
+}

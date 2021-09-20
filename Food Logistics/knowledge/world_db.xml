@@ -1,0 +1,35 @@
+<world_db>
+	<Room>
+		<name>RoomA</name>
+		<delivery_requested>True</delivery_requested>
+		<pickup_needed>False</pickup_needed>
+		<patient>Patient1</patient>
+	</Room>
+	<Room>
+		<name>RoomB</name>
+		<delivery_requested>False</delivery_requested>
+		<pickup_needed>True</pickup_needed>
+		<patient>Patient2</patient>
+	</Room>
+	<Room>
+		<name>RoomA</name>
+		<delivery_requested>True</delivery_requested>
+		<pickup_needed>False</pickup_needed>
+		<patient>Patient3</patient>
+	</Room>
+	<Patient>
+		<name>Patient1</name>
+		<can_fetch>True</can_fetch>
+		<can_open>False</can_open>
+	</Patient>
+	<Patient>
+		<name>Patient2</name>
+		<can_fetch>False</can_fetch>
+		<can_open>False</can_open>
+	</Patient>
+	<Patient>
+		<name>Patient3</name>
+		<can_fetch>False</can_fetch>
+		<can_open>False</can_open>
+	</Patient>
+</world_db>

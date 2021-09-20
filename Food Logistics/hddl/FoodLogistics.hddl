@@ -1,0 +1,74 @@
+(define (domain hospital)
+	(:types room patient - object)
+	(:predicates
+		(deliveryrequested ?rm - room)
+		(pickupneeded ?rm - room)
+		(canfetch ?p - patient)
+		(canopen ?p - patient)
+		(at ?p - patient ?rm - room)
+	)
+	(:capabilities manipulation door-opening)
+
+	(:task DeliverToTable :parameters (?r - robot ?rm - room))
+	(:method table-deliver
+		:parameters (?r - robot ?rm - room)
+		:task (DeliverToTable ?r ?rm)
+		:precondition ()
+		:ordered-subtasks (and
+			(deliver-to-table ?r ?rm)
+		)
+	)
+	(:action deliver-to-table
+		:parameters (?r - robot ?rm - room)
+		:required-capabilities (manipulation)
+		:effect (and
+			(not (deliveryrequested ?rm))
+		)
+	)
+
+	(:task DeliverToFetch :parameters (?rt - robotteam ?rm - room))
+	(:method fetch-deliver
+		:parameters (?rt - robotteam ?rm - room)
+		:task (DeliverToFetch ?rt ?rm)
+		:precondition ()
+		:ordered-subtasks (and
+			(deliver-to-fetch ?rt ?rm)
+		)
+	)
+	(:action deliver-to-fetch
+		:parameters (?rt - robotteam ?rm - room)
+		:effect (and
+			(not (deliveryrequested ?rm))
+		)	
+	)
+
+	(:task PickupDishes :parameters (?rt - robotteam ?rm - room ?p - patient))
+	(:method pickup-with-door-opening
+		:parameters (?rt - robotteam ?rm - room ?p - patient)
+		:task (PickupDishes ?rt ?rm ?p)
+		:precondition ()
+		:ordered-subtasks (and
+			(open-door ?rt ?rm)
+			(pickup-dishes ?rt ?rm ?p)
+		)
+	)
+	(:method pickup-without-door-opening
+		:parameters (?rt - robotteam ?rm - room ?p - patient)
+		:task (PickupDishes ?rt ?rm ?p)
+		:precondition (canopen ?p)
+		:ordered-subtasks (and
+			(pickup-dishes ?rt ?rm ?p)
+		)
+	)
+
+	(:action open-door
+		:parameters (?rt - robotteam ?rm - room)
+		:required-capabilities (door-opening)
+	)
+	(:action pickup-dishes
+		:parameters (?rt - robotteam ?rm - room ?p - patient)
+		:effect (and
+			(not (pickupneeded ?rm))
+		)
+	)
+)

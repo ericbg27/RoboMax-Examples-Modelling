@@ -1,0 +1,121 @@
+{
+    "world_db": {
+        "type": "file",
+        "file_type": "xml",
+        "path": "knowledge/world_db.xml",
+        "xml_root": "world_db"
+    },
+
+    "output": {
+        "output_type": "file",
+        "file_path": "output/task_output.json",
+        "file_type": "json"
+    },
+
+    "location_types": ["Room"],
+
+    "type_mapping": [
+        {
+            "hddl_type": "room",
+            "ocl_type": "Room"
+        },
+        {
+            "hddl_type": "patient",
+            "ocl_type": "Patient"
+        }
+    ],
+
+    "var_mapping": [
+        {
+            "task_id": "AT1",
+            "map": [
+                {
+                    "gm_var": "current_delivery_room",
+                    "hddl_var": "?rm"
+                }
+            ]
+        },
+        {
+            "task_id": "AT2",
+            "map": [
+                {
+                    "gm_var": "current_delivery_room",
+                    "hddl_var": "?rm"
+                }
+            ]
+        },
+        {
+            "task_id": "AT3",
+            "map": [
+                {
+                    "gm_var": "current_pickup_room",
+                    "hddl_var": "?rm"
+                },
+                {
+                    "gm_var": "current_pickup_patient",
+                    "hddl_var": "?p"
+                }
+            ]
+        }
+    ],
+
+    "semantic_mapping": [
+        {
+            "type": "attribute",
+            "name": "delivery_requested",
+            "relates_to": "Room",
+            "belongs_to": "world_db",
+            "mapped_type": "predicate",
+            "map": {
+                "pred": "deliveryrequested",
+                "arg_sorts": ["room"]
+            }
+        },
+        {
+            "type": "attribute",
+            "name": "pickup_needed",
+            "relates_to": "Room",
+            "belongs_to": "world_db",
+            "mapped_type": "predicate",
+            "map": {
+                "pred": "pickupneeded",
+                "arg_sorts": ["room"]
+            }
+        },
+        {
+            "type": "attribute",
+            "name": "can_fetch",
+            "relates_to": "Patient",
+            "belongs_to": "world_db",
+            "mapped_type": "predicate",
+            "map": {
+                "pred": "canfetch",
+                "arg_sorts": ["patient"]
+            }
+        },
+        {
+            "type": "attribute",
+            "name": "can_open",
+            "relates_to": "Patient",
+            "belongs_to": "world_db",
+            "mapped_type": "predicate",
+            "map": {
+                "pred": "canopen",
+                "arg_sorts": ["patient"]
+            }
+        },
+        {
+            "type": "relationship",
+            "main_entity": "Room",
+            "related_entity": "Patient",
+            "relationship_type": "attribute",
+            "attribute_name": "patient",
+            "belongs_to": "world_db",
+            "mapped_type": "predicate",
+            "map": {
+                "pred": "at",
+                "arg_sorts": ["patient", "room"]
+            }
+        }
+    ]
+}
