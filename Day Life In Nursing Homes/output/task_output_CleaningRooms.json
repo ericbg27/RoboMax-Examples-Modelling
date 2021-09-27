@@ -9,6 +9,14 @@
         "t0": {
             "id": "AT1_1|1",
             "name": "CleanRoomUV",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -23,15 +31,26 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "clean-room-uv"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "clean-room-uv",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t1": {
             "id": "AT1_2|1",
             "name": "CleanRoomUV",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -46,9 +65,12 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "clean-room-uv"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "clean-room-uv",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         }

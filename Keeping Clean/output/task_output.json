@@ -37,6 +37,14 @@
         "t0": {
             "id": "AT1_1|1",
             "name": "FindEquipment",
+            "arguments": {
+                "?r": "robot",
+                "?eqrm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?eqrm": "EquipmentRoom"
+            },
             "locations": "EquipmentRoom",
             "robots_num": {
                 "fixed": "True",
@@ -57,15 +65,26 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "get-equipment"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "get-equipment",
+                    "arguments": "?r ?eqrm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t1": {
             "id": "AT3_1|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -86,15 +105,26 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "mark-room"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "mark-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t2": {
             "id": "AT4_1|1",
             "name": "ChangeCovers",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -103,15 +133,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "change-covers"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "change-covers",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t3": {
             "id": "AT5_1|1",
             "name": "VacuumFloor",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -120,15 +161,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "vacuum-floor"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "vacuum-floor",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t4": {
             "id": "AT6_1|1",
             "name": "WipeFloor",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -137,15 +189,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "wipe-floor"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "wipe-floor",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t5": {
             "id": "AT7_1|1",
             "name": "SterilizeRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -154,15 +217,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "sterilize-room"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "sterilize-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t6": {
             "id": "AT8_1|1",
             "name": "RetrieveObjects",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": ""
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -173,15 +247,26 @@
             "triggering_events": [
                 "FoundObject"
             ],
-            "decomposition": [
-                "retrieve-objects"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "retrieve-objects",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t7": {
             "id": "AT1_2|1",
             "name": "FindEquipment",
+            "arguments": {
+                "?r": "robot",
+                "?eqrm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?eqrm": "EquipmentRoom"
+            },
             "locations": "EquipmentRoom",
             "robots_num": {
                 "fixed": "True",
@@ -202,15 +287,26 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "get-equipment"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "get-equipment",
+                    "arguments": "?r ?eqrm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t8": {
             "id": "AT2_2|1",
             "name": "AbortMission",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -225,9 +321,12 @@
             ],
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "msg-to-mgr"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "msg-to-mgr",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         }

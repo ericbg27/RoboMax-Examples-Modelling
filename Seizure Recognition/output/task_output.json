@@ -33,6 +33,14 @@
         "t0": {
             "id": "AT1_1|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -41,15 +49,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "enter-room"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "enter-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t1": {
             "id": "AT2_1|1",
             "name": "FindEquipment",
+            "arguments": {
+                "?r": "robot",
+                "?srm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?srm": "StorageRoom"
+            },
             "locations": "StorageRoom",
             "robots_num": {
                 "fixed": "True",
@@ -57,16 +76,29 @@
             },
             "preconditions": "",
             "effects": "",
-            "triggering_events": "",
-            "decomposition": [
-                "find-equipment"
+            "triggering_events": [
+                "NeedEquipment"
             ],
+            "decomposition": {
+                "a0": {
+                    "name": "find-equipment",
+                    "arguments": "?r ?srm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t2": {
             "id": "AT3_1|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -74,16 +106,29 @@
             },
             "preconditions": "",
             "effects": "",
-            "triggering_events": "",
-            "decomposition": [
-                "enter-room"
+            "triggering_events": [
+                "NeedEquipment"
             ],
+            "decomposition": {
+                "a0": {
+                    "name": "enter-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t3": {
             "id": "AT4_1|1",
             "name": "ObservePatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -92,15 +137,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "observe-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "observe-patient",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t4": {
             "id": "AT5_1|1",
             "name": "InteractWithPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -111,15 +167,26 @@
             "triggering_events": [
                 "AlertReceived"
             ],
-            "decomposition": [
-                "interact-with-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "interact-with-patient",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t5": {
             "id": "AT6_1|1",
             "name": "ApplyTestSequence",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -131,17 +198,31 @@
                 "AlertReceived",
                 "HelpNeeded"
             ],
-            "decomposition": [
-                "apply-test-sequence",
-                "alert-nurses"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "apply-test-sequence",
+                    "arguments": "?r ?rm"
+                },
+                "a1": {
+                    "name": "alert-nurses",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t6": {
             "id": "AT7_1|1",
             "name": "AlertManager",
-            "locations": "",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
+            "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
                 "num": "1"
@@ -149,15 +230,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "alert-manager"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "alert-manager",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t7": {
             "id": "AT1_2|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -166,15 +258,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "enter-room"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "enter-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t8": {
             "id": "AT2_2|1",
             "name": "FindEquipment",
+            "arguments": {
+                "?r": "robot",
+                "?srm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?srm": "StorageRoom"
+            },
             "locations": "StorageRoom",
             "robots_num": {
                 "fixed": "True",
@@ -182,16 +285,29 @@
             },
             "preconditions": "",
             "effects": "",
-            "triggering_events": "",
-            "decomposition": [
-                "find-equipment"
+            "triggering_events": [
+                "NeedEquipment"
             ],
+            "decomposition": {
+                "a0": {
+                    "name": "find-equipment",
+                    "arguments": "?r ?srm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t9": {
             "id": "AT3_2|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -199,16 +315,29 @@
             },
             "preconditions": "",
             "effects": "",
-            "triggering_events": "",
-            "decomposition": [
-                "enter-room"
+            "triggering_events": [
+                "NeedEquipment"
             ],
+            "decomposition": {
+                "a0": {
+                    "name": "enter-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t10": {
             "id": "AT4_2|1",
             "name": "ObservePatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -217,15 +346,26 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "observe-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "observe-patient",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t11": {
             "id": "AT5_2|1",
             "name": "InteractWithPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -236,15 +376,26 @@
             "triggering_events": [
                 "AlertReceived"
             ],
-            "decomposition": [
-                "interact-with-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "interact-with-patient",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t12": {
             "id": "AT6_2|1",
             "name": "ApplyTestSequence",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
             "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
@@ -256,17 +407,31 @@
                 "AlertReceived",
                 "HelpNeeded"
             ],
-            "decomposition": [
-                "apply-test-sequence",
-                "alert-nurses"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "apply-test-sequence",
+                    "arguments": "?r ?rm"
+                },
+                "a1": {
+                    "name": "alert-nurses",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t13": {
             "id": "AT7_2|1",
             "name": "AlertManager",
-            "locations": "",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomB"
+            },
+            "locations": "RoomB",
             "robots_num": {
                 "fixed": "True",
                 "num": "1"
@@ -274,9 +439,12 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "alert-manager"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "alert-manager",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "True",
             "divisible": "True"
         }

@@ -53,6 +53,14 @@
         "t0": {
             "id": "AT1_1|1",
             "name": "EnterRoom",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -61,15 +69,28 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "enter-room"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "enter-room",
+                    "arguments": "?r ?rm"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t1": {
             "id": "AT2_1_1|1",
             "name": "ApproachPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -84,15 +105,28 @@
             ],
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "approach-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "approach-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t2": {
             "id": "AT2_1_1|2",
             "name": "ApproachPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -107,16 +141,32 @@
             ],
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "comeback-later",
-                "approach-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "comeback-later",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "approach-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t3": {
             "id": "AT3_1_1|1",
             "name": "ProvideInstructions",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -125,15 +175,28 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "provide-instructions"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "provide-instructions",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t4": {
             "id": "AT4_1_1|1",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -154,16 +217,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "infectious-disease-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "infectious-disease-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t5": {
             "id": "AT4_1_1|2",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -184,16 +263,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "diabetes-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "diabetes-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t6": {
             "id": "AT4_1_1|3",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -214,16 +309,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "post-surgical-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "post-surgical-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t7": {
             "id": "AT5_1_1|1",
             "name": "AssessPatientStatus",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient1"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -240,15 +351,28 @@
             "triggering_events": [
                 "FailedCollect"
             ],
-            "decomposition": [
-                "assess-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "assess-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t8": {
             "id": "AT6_1_1|1",
             "name": "SendAlert",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": ""
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -260,15 +384,28 @@
                 "FailedCollect",
                 "NoResponse"
             ],
-            "decomposition": [
-                "send-alert"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "send-alert",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t9": {
             "id": "AT2_1_2|1",
             "name": "ApproachPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -283,15 +420,28 @@
             ],
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "approach-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "approach-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t10": {
             "id": "AT2_1_2|2",
             "name": "ApproachPatient",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -306,16 +456,32 @@
             ],
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "comeback-later",
-                "approach-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "comeback-later",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "approach-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t11": {
             "id": "AT3_1_2|1",
             "name": "ProvideInstructions",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -324,15 +490,28 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "provide-instructions"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "provide-instructions",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t12": {
             "id": "AT4_1_2|1",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -353,16 +532,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "infectious-disease-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "infectious-disease-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t13": {
             "id": "AT4_1_2|2",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -383,16 +578,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "diabetes-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "diabetes-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t14": {
             "id": "AT4_1_2|3",
             "name": "CollectVitalSigns",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -413,16 +624,32 @@
                 }
             ],
             "triggering_events": "",
-            "decomposition": [
-                "post-surgical-collect",
-                "mark-as-done"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "post-surgical-collect",
+                    "arguments": "?r ?rm ?p"
+                },
+                "a1": {
+                    "name": "mark-as-done",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t15": {
             "id": "AT5_1_2|1",
             "name": "AssessPatientStatus",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": "Patient2"
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -439,15 +666,28 @@
             "triggering_events": [
                 "FailedCollect"
             ],
-            "decomposition": [
-                "assess-patient"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "assess-patient",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t16": {
             "id": "AT6_1_2|1",
             "name": "SendAlert",
+            "arguments": {
+                "?r": "robot",
+                "?rm": "room",
+                "?p": "patient"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?rm": "RoomA",
+                "?p": ""
+            },
             "locations": "RoomA",
             "robots_num": {
                 "fixed": "True",
@@ -459,15 +699,24 @@
                 "FailedCollect",
                 "NoResponse"
             ],
-            "decomposition": [
-                "send-alert"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "send-alert",
+                    "arguments": "?r ?rm ?p"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t17": {
             "id": "AT7_1|1",
             "name": "RobotSanitization",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "SanitizationRoom",
             "robots_num": {
                 "fixed": "True",
@@ -478,15 +727,24 @@
             "triggering_events": [
                 "SanitizationNeeded"
             ],
-            "decomposition": [
-                "sanitize-robot"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "sanitize-robot",
+                    "arguments": "?r"
+                }
+            },
             "group": "False",
             "divisible": "True"
         },
         "t18": {
             "id": "AT8_1|1",
             "name": "RechargeBattery",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -497,9 +755,12 @@
             "triggering_events": [
                 "LowBattery"
             ],
-            "decomposition": [
-                "robot-recharge"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "robot-recharge",
+                    "arguments": "?r"
+                }
+            },
             "group": "True",
             "divisible": "True"
         }

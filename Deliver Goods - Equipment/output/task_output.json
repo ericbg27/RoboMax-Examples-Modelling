@@ -25,6 +25,16 @@
         "t0": {
             "id": "AT1_1_1|1",
             "name": "GetObject",
+            "arguments": {
+                "?r": "robot",
+                "?s": "storage",
+                "?o": "obj"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?s": "Storage1",
+                "?o": "SterileEquipment"
+            },
             "locations": "Storage1",
             "robots_num": {
                 "fixed": "True",
@@ -33,15 +43,24 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "get-object"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "get-object",
+                    "arguments": "?r ?s ?o"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t1": {
             "id": "AT2_1_1|1",
             "name": "RechargeBattery",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -52,15 +71,28 @@
             "triggering_events": [
                 "BatteryLow"
             ],
-            "decomposition": [
-                "recharge-battery"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "recharge-battery",
+                    "arguments": "?r"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t2": {
             "id": "AT1_1_2|1",
             "name": "GetObject",
+            "arguments": {
+                "?r": "robot",
+                "?s": "storage",
+                "?o": "obj"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?s": "Storage2",
+                "?o": "CleanLinens"
+            },
             "locations": "Storage2",
             "robots_num": {
                 "fixed": "True",
@@ -69,15 +101,24 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "get-object"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "get-object",
+                    "arguments": "?r ?s ?o"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t3": {
             "id": "AT2_1_2|1",
             "name": "RechargeBattery",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -88,15 +129,26 @@
             "triggering_events": [
                 "BatteryLow"
             ],
-            "decomposition": [
-                "recharge-battery"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "recharge-battery",
+                    "arguments": "?r"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t4": {
             "id": "AT3_1|1",
             "name": "DeliverObjects",
+            "arguments": {
+                "?r": "robot",
+                "?l": "location"
+            },
+            "arguments_values": {
+                "?r": "",
+                "?l": "Loc1"
+            },
             "locations": "Loc1",
             "robots_num": {
                 "fixed": "True",
@@ -105,15 +157,24 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "deliver-objects"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "deliver-objects",
+                    "arguments": "?r ?l"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t5": {
             "id": "AT4_1|1",
             "name": "ReturnObjectsToCheckpoint",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -122,15 +183,24 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "return-objects"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "return-objects",
+                    "arguments": "?r"
+                }
+            },
             "group": "True",
             "divisible": "True"
         },
         "t6": {
             "id": "AT5_1|1",
             "name": "AlertTrigger",
+            "arguments": {
+                "?r": "robot"
+            },
+            "arguments_values": {
+                "?r": ""
+            },
             "locations": "",
             "robots_num": {
                 "fixed": "True",
@@ -139,9 +209,12 @@
             "preconditions": "",
             "effects": "",
             "triggering_events": "",
-            "decomposition": [
-                "trigger-alert"
-            ],
+            "decomposition": {
+                "a0": {
+                    "name": "trigger-alert",
+                    "arguments": "?r"
+                }
+            },
             "group": "True",
             "divisible": "True"
         }
