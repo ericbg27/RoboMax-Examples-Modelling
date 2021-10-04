@@ -15,17 +15,17 @@
 	)
 	(:capabilities manipulation door-opening)
 
-	(:task GetFood :parameters (?r - robot ?l - location))
+	(:task GetFood :parameters (?r - robot ?l - location ?d - delivery))
 	(:method food-pickup
-		:parameters (?r - robot ?l - location)
-		:task (GetFood ?r ?l)
+		:parameters (?r - robot ?l - location ?d -delivery)
+		:task (GetFood ?r ?l ?d)
 		:ordered-subtasks (and
 			(navto ?r ?l)
-			(wait-for-food ?r ?l)
+			(wait-for-food ?r ?l ?d)
 		)
 	)
 	(:action wait-for-food
-		:parameters (?r - robot ?l - location)
+		:parameters (?r - robot ?l - location ?d - delivery)
 		:effect (and
 			(pickedmeal ?r)
 		)

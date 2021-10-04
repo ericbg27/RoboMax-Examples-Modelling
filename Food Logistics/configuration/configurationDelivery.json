@@ -36,6 +36,10 @@
                 {
                     "gm_var": "kitchen_loc",
                     "hddl_var": "?l"
+                },
+                {
+                    "gm_var": "current_delivery",
+                    "hddl_var": "?d"
                 }
             ]
         },
