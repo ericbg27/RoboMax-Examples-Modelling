@@ -371,7 +371,7 @@
             "arguments_values": {
                 "?r": "",
                 "?rm": "RoomA",
-                "?p": ""
+                "?p": "Patient1"
             },
             "locations": "RoomA",
             "robots_num": {
@@ -686,7 +686,7 @@
             "arguments_values": {
                 "?r": "",
                 "?rm": "RoomA",
-                "?p": ""
+                "?p": "Patient2"
             },
             "locations": "RoomA",
             "robots_num": {
@@ -712,10 +712,12 @@
             "id": "AT7_1|1",
             "name": "RobotSanitization",
             "arguments": {
-                "?r": "robot"
+                "?r": "robot",
+                "?srm": "room"
             },
             "arguments_values": {
-                "?r": ""
+                "?r": "",
+                "?srm": "SanitizationRoom"
             },
             "locations": "SanitizationRoom",
             "robots_num": {
@@ -730,7 +732,7 @@
             "decomposition": {
                 "a0": {
                     "name": "sanitize-robot",
-                    "arguments": "?r"
+                    "arguments": "?r ?srm"
                 }
             },
             "group": "False",

@@ -43,11 +43,13 @@
             "name": "GetFood",
             "arguments": {
                 "?r": "robot",
-                "?l": "location"
+                "?l": "location",
+                "?d": "delivery"
             },
             "arguments_values": {
                 "?r": "",
-                "?l": "Kitchen"
+                "?l": "Kitchen",
+                "?d": "Delivery1"
             },
             "locations": "Kitchen",
             "robots_num": {
@@ -70,7 +72,7 @@
                 },
                 "a1": {
                     "name": "wait-for-food",
-                    "arguments": "?r ?l"
+                    "arguments": "?r ?l ?d"
                 }
             },
             "group": "True",
@@ -237,11 +239,13 @@
             "name": "GetFood",
             "arguments": {
                 "?r": "robot",
-                "?l": "location"
+                "?l": "location",
+                "?d": "delivery"
             },
             "arguments_values": {
                 "?r": "",
-                "?l": "Kitchen"
+                "?l": "Kitchen",
+                "?d": "Delivery2"
             },
             "locations": "Kitchen",
             "robots_num": {
@@ -264,7 +268,7 @@
                 },
                 "a1": {
                     "name": "wait-for-food",
-                    "arguments": "?r ?l"
+                    "arguments": "?r ?l ?d"
                 }
             },
             "group": "True",
