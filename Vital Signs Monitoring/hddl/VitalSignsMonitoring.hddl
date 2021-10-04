@@ -147,16 +147,16 @@
 		:parameters (?r - robot ?rm - room ?p - patient)
 	)
 
-	(:task RobotSanitization :parameters (?r - robot))
+	(:task RobotSanitization :parameters (?r - robot ?srm - room))
 	(:method robot-sanitization
-		:parameters (?r - robot)
-		:task (RobotSanitization ?r)
+		:parameters (?r - robot ?srm - room)
+		:task (RobotSanitization ?r ?srm)
 		:ordered-subtasks (and
-			(sanitize-robot ?r)
+			(sanitize-robot ?r ?srm)
 		)
 	)
 	(:action sanitize-robot
-		:parameters (?r - robot)
+		:parameters (?r - robot ?srm - room)
 	)
 
 	(:task RechargeBattery :parameters (?r - robot))

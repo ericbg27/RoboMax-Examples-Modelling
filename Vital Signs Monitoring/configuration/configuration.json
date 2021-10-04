@@ -99,6 +99,15 @@
                     "hddl_var": "?p"
                 }
             ]
+        },
+        {
+            "task_id": "AT7",
+            "map": [
+            	{
+            	    "gm_var": "sanitization_room",
+            	    "hddl_var": "?srm"
+            	}
+            ]
         }
     ],
 
