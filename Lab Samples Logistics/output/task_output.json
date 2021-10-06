@@ -69,7 +69,7 @@
                     "arguments": "?r"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t1": {
@@ -105,7 +105,7 @@
                     "arguments": "?r"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t2": {
@@ -139,7 +139,7 @@
                     "arguments": "?r"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t3": {
@@ -175,7 +175,7 @@
                     "arguments": "?r"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         }
     },

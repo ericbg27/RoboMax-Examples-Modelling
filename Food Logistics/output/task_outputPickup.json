@@ -105,7 +105,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t1": {
             "id": "AT1_1|2",
@@ -179,7 +179,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t2": {
             "id": "AT1_1|3",
@@ -245,7 +245,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t3": {
             "id": "AT1_1|4",
@@ -320,7 +320,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t4": {
             "id": "AT2_1|1",
@@ -352,7 +352,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t5": {
             "id": "AT1_2|1",
@@ -421,7 +421,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t6": {
             "id": "AT1_2|2",
@@ -495,7 +495,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t7": {
             "id": "AT1_2|3",
@@ -561,7 +561,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t8": {
             "id": "AT1_2|4",
@@ -636,7 +636,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         },
         "t9": {
             "id": "AT2_2|1",
@@ -668,7 +668,7 @@
                 }
             },
             "group": "True",
-            "divisible": "False"
+            "divisible": "True"
         }
     },
     "constraints": [

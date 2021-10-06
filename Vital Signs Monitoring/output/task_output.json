@@ -75,7 +75,7 @@
                     "arguments": "?r ?rm"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t1": {
@@ -111,7 +111,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t2": {
@@ -151,7 +151,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t3": {
@@ -181,7 +181,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t4": {
@@ -227,7 +227,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t5": {
@@ -273,7 +273,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t6": {
@@ -319,7 +319,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t7": {
@@ -357,7 +357,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t8": {
@@ -390,7 +390,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t9": {
@@ -426,7 +426,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t10": {
@@ -466,7 +466,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t11": {
@@ -496,7 +496,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t12": {
@@ -542,7 +542,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t13": {
@@ -588,7 +588,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t14": {
@@ -634,7 +634,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t15": {
@@ -672,7 +672,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t16": {
@@ -705,7 +705,7 @@
                     "arguments": "?r ?rm ?p"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t17": {
@@ -735,7 +735,7 @@
                     "arguments": "?r ?srm"
                 }
             },
-            "group": "False",
+            "group": "True",
             "divisible": "True"
         },
         "t18": {
