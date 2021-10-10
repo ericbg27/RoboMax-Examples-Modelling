@@ -60,6 +60,7 @@
 			(pickedmeal ?r1)
 		)
 		:ordered-subtasks (and
+			(navto ?r1 ?l)
 			(FetchMeal ?r1 ?r2 ?l ?p)
 		)
 	)
@@ -80,6 +81,7 @@
 		:parameters (?r1 ?r2 - robot ?l - location ?p - patient)
 		:task (FetchMeal ?r1 ?r2 ?l ?p)
 		:ordered-subtasks (and
+			(navto ?r2 ?l)
 			(approach-robot ?r1 ?r2)
 			(grasp-meal ?r2 ?r1)
 			(deliver-meal-to-patient ?r2 ?p ?l)
